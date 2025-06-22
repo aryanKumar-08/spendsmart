@@ -73,7 +73,7 @@ export function CreateAccountDrawer({ children }) {
   }, [error]);
 
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
+    <Drawer open={open} onOpenChange={setOpen} >
       <DrawerTrigger asChild>{children}</DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
@@ -125,7 +125,7 @@ export function CreateAccountDrawer({ children }) {
             <div className="space-y-2">
               <label
                 htmlFor="balance"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm  font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 Initial Balance
               </label>
@@ -168,7 +168,7 @@ export function CreateAccountDrawer({ children }) {
               </DrawerClose>
               <Button
                 type="submit"
-                className="flex-1"
+                className="flex-1 bg-blue-400"
                 disabled={createAccountLoading}
               >
                 {createAccountLoading ? (

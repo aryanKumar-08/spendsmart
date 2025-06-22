@@ -10,14 +10,14 @@ const Header = async () => {
   await checkUser();
 
   return (
-    <header className="fixed top-0 w-full bg-gradient-to-br from-sky-100 via-violet-200 to-blue-200 backdrop-blur-md z-50 border-b">
-      <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
+    <header className="fixed top-0 w-full bg-gradient-to-r from-[#1950c6] to-[#a468dd] backdrop-blur-md z-50 border-b ">
+      <nav className="container mx-auto px-4 py-1 flex items-center justify-between">
         <Link href="/">
           <Image
             src={"/logo.png"}
             alt="Welth Logo"
             width={300}
-            height={80}
+            height={100}
             className="h-12 w-auto object-contain"
           />
         </Link>
