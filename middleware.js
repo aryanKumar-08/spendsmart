@@ -43,6 +43,14 @@ const clerk = clerkMiddleware(async (auth, req) => {
 // Chain middlewares - ArcJet runs first, then Clerk
 export default createMiddleware(aj, clerk);
 
+// export const config = {
+//   matcher: ["/((?!_next|.*\\..*).*)"], // Apply Clerk to all pages except _next/static files
+// };
+
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)"], // Apply Clerk to all pages except _next/static files
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico).*)",
+    "/",
+    "/(api|trpc)(.*)",
+  ],
 };
